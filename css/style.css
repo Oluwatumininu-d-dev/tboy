@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #110f14;
+    font-family: "Oswald", 'san-serif';
+}
+/* =====HEADER===== */
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 2px solid #b31afa;
+    box-shadow: 0px 0px 15px #b923ff;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    /* background: rgba(255, 255, 255, 0.1); Transparent white */
+        backdrop-filter: blur(10px);          /* Blur the background */
+        -webkit-backdrop-filter: blur(10px);  /* Safari support */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+.nav-links li a:hover{
+    color: #b31afa;
+}
+.nav-links li a i{
+    margin-right: 10px;
+}
+.button{
+    border: 2px solid #ba3aba;
+    border-radius: 15px;
+    padding: 5px 5px 5px 5px;
+    background-color: #b31afa;
+    box-shadow: 0px 0px 20px #7a787a;
+    transition: all 0.3 ease;
+}
+.button:hover{
+    color: #b31afa;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px #b923ff;
+}
+.menu-toggle{
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #b31afa;
+    text-shadow: 2px 2px 20px #b923ff;
+}
+.menu-toggle:hover{
+    color: #c037ff;
+}
+
+
+/* =====ABOUT===== */
+#about{
+    position: absolute;
+    margin-top: 50px;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+}
+.info{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+        margin-bottom: 7px;
+
+}
+.left, .right-img{
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.left{
+    flex-wrap: wrap;
+}
+.stat {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    gap: 10px;
+    margin-top: -50px;
+}
+.stat .stat-info {
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 5px;
+    flex: 1 1 100px;
+}
+img{
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 15px;
+    transform: rotate(5deg);
+    box-shadow: 0 10px 30px rgba(255, 0, 255, 0.3); /* Pink glow */
+    background: rgba(255, 255, 255, 0.05); /* Slight glass effect */
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 1s ease;
+}
+img:hover{
+    transform: scale(1.5);
+}
+.right-img{
+    padding-top: 30px;
+    padding-left: 250px;
+}
+.me h5 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #fff;
+}
+.gradient-text {
+    background: linear-gradient(90deg, #b31afa, white);
+    background-clip: text;                 /* Standard syntax */
+    -webkit-background-clip: text;         /* WebKit for Chrome/Safari */
+    color: transparent;                    /* Fallback for non-supporting browsers */
+    -webkit-text-fill-color: transparent;  /* Required for WebKit */
+    font-size: 4.7rem;
+    font-weight: bolder;
+    padding-left: 9%;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.me p{
+    color: #fff;
+    padding-top: 15px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+.social{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.social a{
+    color: #b31afa;
+    border: 1px solid #b31afa;
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px;
+    transition: all 1s ease;
+}
+.social a:hover{
+    color: #fff;
+    border-color: #fff;
+}
+.stat-info .num{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.gradient{
+    background: linear-gradient(180deg, #fff, #b31afa);
+    background-clip: text;                 /* Standard syntax */
+    -webkit-background-clip: text;         /* WebKit for Chrome/Safari */
+    color: transparent;                    /* Fallback for non-supporting browsers */
+    -webkit-text-fill-color: transparent;  /* Required for WebKit */
+}
+
+/* =====EDUCATION=====*/
+#education{
+    background-color: red;
+    display: flex;
+}
+#education h3{
+    padding: auto;
+}
+/* ====RESPONSIVE DESIGN===== */
+@media (max-width: 1024px) {
+    .nav-links {
+        position: absolute;
+        /* background: #ba3aba; */
+        top: 75px;
+        right: 15px;
+        width: 200px;
+        flex-direction: column;
+        overflow: hidden;
+
+        background: rgba(255, 255, 255, 0.1); /* Transparent white */
+        backdrop-filter: blur(10px);          /* Blur the background */
+        -webkit-backdrop-filter: blur(10px);  /* Safari support */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        box-shadow: 0 4px 30px rgba(255, 255, 255, .3);  /* Soft shadow */
+        border-radius: 15px;
+        padding: 20px;
+        color: #fff;
+        text-shadow: 2px 1px 4px #ba3aba;
+        /* Animation settings */
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+    .nav-links li{
+        margin: -5px;
+    }
+    .nav-links.show {
+        max-height: 500px; /* big enough to contain the links */
+        opacity: 1;
+        z-index: 1;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    /* ==ABOUT== */
+    .stat {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 0px;
+    }
+    .stat .stat-info {
+        flex: 1 1 45%;
+    }
+    .info{
+        flex-direction: column;
+    }
+    #about{
+        padding: 20px 40px;
+        margin-top: 60px;
+    }
+    .right-img{
+        display: none;
+    }
+    .social{
+        padding-top: 20px;
+    }
+}
+
