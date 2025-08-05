@@ -21,7 +21,7 @@ body{
     color: #fff;
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 100;
 
     /* background: rgba(255, 255, 255, 0.1); Transparent white */
         backdrop-filter: blur(10px);          /* Blur the background */
@@ -200,9 +200,9 @@ h3{font-size:2rem;margin-bottom:20px;color:#b31afa;}
 .cards{display:flex;flex-wrap:wrap;gap:20px;}
 .card{background:rgba(255,255,255,0.05);border-radius:15px;padding:20px;flex:1 1 calc(50% - 40px);min-width:280px;backdrop-filter:blur(8px);box-shadow:0 4px 20px rgba(0,0,0,0.5);transition:transform .3s;}
 .card:hover{transform:translateY(-5px);} 
-.card h4{margin-bottom:10px;color:#fff;}
+.card h4{margin-bottom:10px;color:#b31afa;}
 .card span{font-size:0.9rem;color:#ccc;display:block;margin-bottom:10px;}
-.card p{font-size:1rem;line-height:1.5;color: #b31afa;}
+.card p{font-size:1rem;line-height:1.5;color: #fff;}
 
 /* Projects grid */
 .projects-grid .project-card{flex:1 1 calc(33.333% - 40px);}
@@ -210,6 +210,27 @@ h3{font-size:2rem;margin-bottom:20px;color:#b31afa;}
 /* Contact */
 #contact p{margin-bottom:20px;font-size:1.1rem;}
 #contact .button{padding:10px 20px;}
+
+.lang{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.lang a{
+    color: #b31afa;
+    border: 1px solid #b31afa;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    transition: all 1s ease;
+}
+.social a:hover{
+    color: #fff;
+    border-color: #fff;
+}
 /* ====RESPONSIVE DESIGN===== */
 @media (max-width: 1024px) {
     .nav-links {
@@ -221,11 +242,12 @@ h3{font-size:2rem;margin-bottom:20px;color:#b31afa;}
         flex-direction: column;
         overflow: hidden;
 
-        background: rgba(255, 255, 255, 0.1); /* Transparent white */
-        backdrop-filter: blur(10px);          /* Blur the background */
+        background-color: rgb(17, 15, 20, 0.9);
+       backdrop-filter: blur(10px);          /* Blur the background */
         -webkit-backdrop-filter: blur(10px);  /* Safari support */
         border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
-        box-shadow: 0 4px 30px rgba(255, 255, 255, .3);  /* Soft shadow */
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
         border-radius: 15px;
         padding: 20px;
         color: #fff;
@@ -246,8 +268,8 @@ h3{font-size:2rem;margin-bottom:20px;color:#b31afa;}
     .menu-toggle {
         display: block;
     }
-    .me h5{
-        font-size: 1.75rem;
+    .me h1{
+        font-size: 4rem;
     font-weight: bolder;
     color: #fff;
     }
